@@ -6,15 +6,11 @@
   "scripts": {
     "dev": "webpack --mode development --watch -d --progress --color",
     "build": "webpack --mode production --bail -p",
-    "webfonts": "bemo-webfonts -s source/fonts/svg -f source/fonts -S source/stylesheets/variables/_icon-glyphs.scss",
-    "start:proxy": "./proxy/proxy.js",
-    "start:lambda": "netlify-lambda serve -c netlify.config.js functions/source",
-    "build:lambda": "netlify-lambda build -c netlify.config.js functions/source",
     "lint": "yarn run eslint source/javascripts/*",
     "lint:autocorrect": "eslint source/javascripts/* --fix",
-    "start": "concurrently \"npm run start:proxy\" \"npm run start:lambda\" \"npm run start:webpack\""
+    "start": "npm run start:webpack"
   },
-  "author": "Cantiere Creativo s.r.l.",
+  "author": "Tommaso Valentini",
   "main": "index.js",
   "license": "ISC",
   "devDependencies": {
@@ -40,11 +36,7 @@
     "popper.js": "^1.15.0",
     "postcss-loader": "2.0.10",
     "sass-loader": "6.0.6",
-    "slick-carousel": "^1.8.1",
     "style-loader": "^0.23.1",
-    "svg-sprite-loader": "^3.4.1",
-    "svgo": "^1.1.0",
-    "svgo-loader": "^2.1.0",
     "webpack": "4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-modernizr-loader": "4.0.1"

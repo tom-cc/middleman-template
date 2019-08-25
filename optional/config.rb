@@ -53,7 +53,7 @@ helpers do
   end
 
   def active_link_to(name, url, options = {})
-    options[:class] = options.fetch(:class, "") + " is-active" if active?(url)
+    options[:class] = options.fetch(:class, "") + " active" if active?(url)
     link_to name, url, options
   end
 

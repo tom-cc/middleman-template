@@ -30,18 +30,18 @@ module Middleman
       run 'mv ./node_modules/bootstrap/scss/* source/stylesheets/'
     end
 
-    def add_slick_sass
-      template 'optional/slick.sass', 'source/stylesheets/variables/_slick.sass'
-      run 'mkdir -p source/stylesheets/blocks/slick/'
-      directory 'optional/slick', 'source/stylesheets/blocks/slick', exclude_pattern: /\.DS_Store$/
-    end
+    # def add_slick_sass
+    #   template 'optional/slick.sass', 'source/stylesheets/variables/_slick.sass'
+    #   run 'mkdir -p source/stylesheets/blocks/slick/'
+    #   directory 'optional/slick', 'source/stylesheets/blocks/slick', exclude_pattern: /\.DS_Store$/
+    # end
 
-    def setup_sass
-      # SVG INJECT
-      template 'optional/svg.sass', 'source/stylesheets/blocks/_svg.sass'
-      template 'optional/svg/svg_icons.js', 'source/fonts/svg/svg_icons.js'
-      template 'optional/svg/svg.pattern', 'source/fonts/svg/svg.pattern'
-    end
+    # def setup_sass
+    #   # SVG INJECT
+    #   template 'optional/svg.sass', 'source/stylesheets/blocks/_svg.sass'
+    #   template 'optional/svg/svg_icons.js', 'source/fonts/svg/svg_icons.js'
+    #   template 'optional/svg/svg.pattern', 'source/fonts/svg/svg.pattern'
+    # end
 
     # def setup_addition_sass
     #   remove_file 'source/stylesheets/blocks/bemo/_canvas.sass'
