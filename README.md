@@ -1,14 +1,13 @@
 # Middleman Template
 
-The base Middleman application used at [cantierecreativo], ready to deploy
-to [Netlify].
+An edited version of the base Middleman application used at [cantierecreativo] with bootstrap support, ready to deploy to [Netlify].
 
 [cantierecreativo]: https://cantierecreativo.net/
 [Netlify]: https://www.netlify.com/
 
 ## Requirements
 
-This project requires [Node.js](https://nodejs.org/) (v9.3.0) with 
+This project requires [Node.js](https://nodejs.org/) (v8.16.1) with 
 [yarn](https://yarnpkg.com/) and [Ruby](https://ruby-lang.org) (v2.6.2)
 
 ## Usage
@@ -28,7 +27,7 @@ $ gem install middleman
 3. Install or set Node (9.3.0) with NVM:
 
 ```
-$ nvm install/use 9.3.0
+$ nvm install/use 8.16.1
 ```
 
 4. Then run:
@@ -73,7 +72,6 @@ project/
 |   +-- en.yml
 +-- source
     +-- images/
-    +-- fonts/
     +-- localizable/
     |   +-- index.html.slim
     +-- partials/
@@ -83,13 +81,13 @@ project/
     |   +-- site.webmanifest.erb
     |   +-- contact_page.html.slim
     +-- 404.html.slim
-    +-- index.html.erb
+    +-- index.html.slim
     +-- javascripts
     ¦   +-- index.js
     +-- layouts
     ¦   +-- layout.slim
     +-- stylesheets
-        +-- _application.sass
+        +-- bootstrap.scss
 ```
 
 * To see the list of helpers in the system read [HELPERS.md](HELPERS.md)
@@ -125,7 +123,7 @@ This template comes with the following features and tools:
 
 ## License
 
-Copyright © 2019 CantiereCreativo. This is free software, and may
+Copyright © 2019 Tommaso Valentini. This is free software, and may
 be redistributed under the terms specified in the [LICENSE] file.
 
 [license]: LICENSE.md

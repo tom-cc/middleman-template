@@ -162,7 +162,7 @@ end
 #         locals: { page: dato.about_page },
 #         locale: locale
 #
-#       dato.aritcles.each do |article|
+#       dato.articles.each do |article|
 #         I18n.locale = locale
 #         proxy "/#{locale}/articles/#{article.slug}/index.html", "/templates/article_template.html", :locals => { article: article }, ignore: true, locale: locale
 #       end
