@@ -1,7 +1,7 @@
 {
-  "google_analytics_key": "UA-XXXX-YY",
-  "google_maps_key": "AIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
-  "iubenda_site_id": "ZZZZZ",
+  // "google_analytics_key": "",
+  // "google_maps_key": "",
+  // "iubenda_site_id": "",
   "browserconfig_title_color": "#000000",
   "webmanifest_theme_color": "#FFFFFF",
   "webmanifest_background_color": "#FFFFFF",
