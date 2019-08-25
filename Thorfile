@@ -28,6 +28,7 @@ module Middleman
       run 'yarn install'
       run 'mkdir -p source/stylesheets/'
       run 'mv ./node_modules/bootstrap/scss/* source/stylesheets/'
+      run 'mv ./node_modules/bootstrap/js/src/* source/javascripts/'
     end
 
     # def add_slick_sass
