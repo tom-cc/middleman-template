@@ -24,7 +24,7 @@ $ rbenv install/set 2.6.2
 $ gem install middleman
 ```
 
-3. Install or set Node (9.3.0) with NVM:
+3. Install or set Node (8.16.1) with NVM:
 
 ```
 $ nvm install/use 8.16.1
