@@ -1,52 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-
-var svgoConfig = {
-  multipass: true,
-  pretty: true,
-  plugins: [
-    {cleanupAttrs: true},
-    {cleanupEnableBackground: true},
-    {cleanupIDs: true},
-    {cleanupListOfValues: true},
-    {cleanupNumericValues: true},
-    {collapseGroups: true},
-    {convertColors: true},
-    {convertPathData: true},
-    {convertShapeToPath: true},
-    {convertStyleToAttrs: true},
-    {convertTransform: true},
-    {mergePaths: true},
-    {moveElemsAttrsToGroup: true},
-    {moveGroupAttrsToElems: true},
-    //{removeAttrs: {attrs: '(fill|stroke)'}}, // if you don't want any color from the original SVG - see also the removeStyleElement option
-    {removeComments: true},
-    {removeDesc: false}, // for usability reasons
-    {removeDimensions: true},
-    {removeDoctype: true},
-    {removeEditorsNSData: true},
-    {removeEmptyAttrs: true},
-    {removeEmptyContainers: true},
-    {removeEmptyText: true},
-    {removeHiddenElems: true},
-    {removeMetadata: true},
-    {removeNonInheritableGroupAttrs: true},
-    {removeRasterImages: true}, // bitmap! you shall not pass!
-    {removeScriptElement: true}, // shoo, javascript!
-    //{removeStyleElement: true}, // if you really really want to remove ANY <style> tag from the original SVG, watch out as it could be too much disruptive - see also the removeAttrs option
-    {removeTitle: false}, // for usability reasons
-    {removeUnknownsAndDefaults: true},
-    {removeUnusedNS: true},
-    {removeUselessDefs: true},
-    {removeUselessStrokeAndFill: true},
-    {removeViewBox: false},
-    {removeXMLProcInst: true},
-    {sortAttrs: true}
-  ]
-};
 
 const extractSass = new ExtractTextPlugin({
   filename: "stylesheets/[name].css",
@@ -56,8 +12,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   entry: {
     application: './source/javascripts/index.js',
-    styles: './source/stylesheets/_application.sass',
-    svg: './source/fonts/svg/svg_icons.js'
+    styles: './source/stylesheets/bootstrap.scss'
   },
   resolve: {
     modules: [
@@ -108,33 +63,11 @@ module.exports = {
             { loader: "sass-loader" }
           ]
         })
-      },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: {
-              extract: true,
-              spriteFilename: "fonts/svg/sprite.svg"
-            }
-          },
-          {
-            loader: 'svgo-loader',
-            options: svgoConfig
-          }
-        ]
       }
     ]
   },
   plugins: [
     extractSass,
-    new SpriteLoaderPlugin({
-      plainSprite: true,
-      spriteAttrs: {
-        id: 'svg-sprite-inline'
-      }
-    }),
     new MinifyPlugin()
   ]
 };
