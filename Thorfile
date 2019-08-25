@@ -31,29 +31,6 @@ module Middleman
       run 'mv ./node_modules/bootstrap/js/src/* source/javascripts/'
     end
 
-    # def add_slick_sass
-    #   template 'optional/slick.sass', 'source/stylesheets/variables/_slick.sass'
-    #   run 'mkdir -p source/stylesheets/blocks/slick/'
-    #   directory 'optional/slick', 'source/stylesheets/blocks/slick', exclude_pattern: /\.DS_Store$/
-    # end
-
-    # def setup_sass
-    #   # SVG INJECT
-    #   template 'optional/svg.sass', 'source/stylesheets/blocks/_svg.sass'
-    #   template 'optional/svg/svg_icons.js', 'source/fonts/svg/svg_icons.js'
-    #   template 'optional/svg/svg.pattern', 'source/fonts/svg/svg.pattern'
-    # end
-
-    # def setup_addition_sass
-    #   remove_file 'source/stylesheets/blocks/bemo/_canvas.sass'
-    #   remove_file 'source/stylesheets/mixins/_canvas-layout.sass'
-    #   template 'optional/canvas.sass', 'source/stylesheets/blocks/_canvas.sass'
-    #   template 'optional/canvas-layout.sass', 'source/stylesheets/mixins/_canvas-layout.sass'
-    #   template 'optional/site-nav.sass', 'source/stylesheets/blocks/_site-nav.sass'
-    #   template 'optional/site-footer.sass', 'source/stylesheets/blocks/_site-footer.sass'
-    #   template 'optional/aside-nav.sass', 'source/stylesheets/blocks/_aside-nav.sass'
-    # end
-
     def setup_remotes
       template 'optional/README.md', 'README.md'
 
